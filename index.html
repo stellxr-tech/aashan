@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aashan</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-height: 600px; /* Set max height to reduce image size */
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .btn {
+            margin-top: 10px;
+        }
+
+        .image-left {
+            float: left;
+            width: 50%;
+        }
+
+        .image-right {
+            float: right;
+            width: 50%;
+            margin-left: -25px;
+        }
+
+        .blank-image {
+            background-color: #f5f5f5;
+            height: 300px; /* Set the height to match the image */
+            width: 100%;
+        }
+
+        @media (max-width: 992px) {
+            .image-left, .image-right {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .image-right {
+                margin-left: 0;
+            }
+
+            .row {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+
+        .section-content img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+        }
+
+        .navbar-nav {
+            flex-direction: row;
+        }
+
+        .navbar-brand img {
+            height: 30px;
+            width: auto;
+        }
+
+        .carousel-item {
+    height: 70vh;
+    background-size: cover;
+    position: relative;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .center-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  .logo-text {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+    </style>
+</head>
+<body>
+        
+<nav class="navbar navbar-expand-lg navbar-white bg-white sticky-top">
+        <a class="navbar-brand" href="#">
+            <img src="logoreal.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 3</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+  
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="background-image: url('https://img.freepik.com/premium-photo/random-best-photo_865967-223874.jpg');">
+            <div class="overlay"></div>
+            <div class="center-content">
+              <div class="logo-text">Aashan</div>
+              <button class="btn btn-primary">Learn More</button>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('https://img.freepik.com/premium-photo/ai-generated-amazing-nature-background_1297-4789.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1712880000&semt=ais');">
+            <div class="overlay"></div>
+            <div class="center-content">
+              <div class="logo-text">Aashan</div>
+              <button class="btn btn-primary">Learn More</button>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('https://img.freepik.com/premium-photo/random-best-photo_865967-78469.jpg?size=626&ext=jpg&ga=GA1.1.87170709.1707523200&semt=ais');">
+            <div class="overlay"></div>
+            <div class="center-content">
+              <div class="logo-text">Aashan</div>
+              <button class="btn btn-primary">Learn More</button>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      
+
+<div style="overflow: hidden; white-space: nowrap; background-color: rgb(0, 0, 0); color: white;">
+        <marquee behavior="scroll" direction="left" scrollamount="4">
+            This is a responsive marquee with black background and white text. This is a responsive marquee with black background and white text.
+        </marquee>
+    </div>
+    
+   <br><br><br><section class="section-content">
+        <div class="container">
+            <div class="row align-items-center">
+                
+                <!-- Content on the left -->
+                <div class="col-md-6 order-md-2">
+                    <h2 class="mb-4">SSLC Results</h2>
+                    <p class="mb-4">Get the direct link to view SSLC results. This redirects to the official website of the Kerala government for viewing SSLC Results. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <button class="btn btn-primary">View Results</button>
+                </div>
+    
+                <!-- Image on the right -->
+                <div class="col-md-6 order-md-1">
+                    <img 
+                        src="https://s3-alpha-sig.figma.com/img/603b/a6b0/22ebed91c29f6048472bf5590c0dfbfb?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CrN8Hof6HiGk0ssbTFzErySdCJgYDXwa5OStvLCkBHz8WgOU7OFAOOal~UhiueLsEkcDxRUalm2PvZk0TQTO~HaQyzflyupf06oFvXVju2~zu8ZIwBeiQG~Dbvlnr36cwAsl3xNx5hk-CVf22F6grF~ll54Yc4HSBPDTmkLWnpbK~oAZ-6uFsucGB4dDI9ono8w2HKu37FHJIFeYf9O8VlL2nIGJDZc3aPvXyFWWkssjTGGt6aXVLtCE6l~V5VdGIu727df79sehdfeVioq9tJn8qZQlJ63OmL8844cxp9JwC2ZDkdmbgFkdDc9SeK9TMisXfznYsKO4tEreSEfWOQ__" 
+                        alt="Image" 
+                        class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <br><br><br> <section class="section-content">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Image on the left -->
+           
+                <!-- Content on the right -->
+                <div class="col-md-6">
+                    <h2>Edu-themed Games</h2>
+                    <p>Games that teach and entertain the diverging young ones of our generation so that they may take a step into the dream world of education. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <button class="btn btn-primary">Button</button>
+                </div>
+                <div class="col-md-6">
+                        <img src="https://s3-alpha-sig.figma.com/img/4045/9eef/6df68f46bc18c6b54556dcad63b0d4b9?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LAMQD-REgfoRJXiuMbGLHYcuogsbZ9b3r-8X1SooBihshzF75mZ7mpjjk8tDws2yHU-VezM24o-TmDpbOHs7R9SezRcX489UDwYgJP1oo1ga~H~t3i~Zz-HK~N5DScW~6zTq1tZANe3qt03xRhvhI4lUezoRZmsjKA9q8FD6cM4hi8cG2zY62876zeLjCgRjk21-cS5w~AGw6awxeiZmttSYeXMt9~ecgaUkBoCFGqsbJ5KoY3bQN4a9L2NLCiwydAstBlpuumgmZh7ysy7rbEyK-C~LNuGCYhWilZyvh1a4sRo1jdYNjJiL~RF~7Y9VcO6Ii50SRcq9KGc5xEczDQ__" alt="Image" class="img-fluid">
+                    </div>
+            </div>
+        </div>
+    </section>
+    
+    <br><br><br><br>
+    <center><section class="section-content">
+        <div class="container">
+            <div class="row"> 
+                <!-- Image on top -->
+                <div class="col-md-12 mb-4">
+                    <img src="https://s3-alpha-sig.figma.com/img/0968/098f/c62f889d65f24909b438bdcdd8154f72?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=csf9TaerTl7iBVjQxdopQSoD64bcLF6O20fesWK1cmhlE5-G5~gNjL2DEw273lbWnPqX8p-aj7WYi4B4xcaQb-av6uESv8QPSW1XVIjDwKp5b6SbCXx12MQRb5OUxhkoT7-Njgw1PBRruP17Hqf9HbyZlXiXbE~gke~8f1GdtPaKmCQ0Jor2ggjHAZVVhujqhSiT1suV0hL2RGZvvL5MzfXHQASwcx~NHCDYkOHbYGvyc~WVlNiygGbD0SQ7X5FP4kQM7rlq8JeWTj5OQYTzYhncWM6u2nJgD9aJ22Syog4wwNwNn2ygYZEusYVOJ3oDTAZ6h7TVc97z~ZRpuHqoNg__" alt="Image" class="img-fluid">
+                </div>
+                <!-- Heading, Paragraph, and Button -->
+                <div class="col-md-12">
+                        <h2>Competitive Guide</h2>
+                    <p style="max-width: 500px;">An ultimate guide to competitions conducted by the Kerala government for students such as Kalolsavam, Sastrolsavam and Kayikolsavam. Dominate the IT mela with help from the tech giants Stellxr and their ways of computer coding and designing</p>
+                    <button class="btn btn-primary">Button</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</center>
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
