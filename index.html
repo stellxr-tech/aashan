@@ -3,506 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aashan</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts - Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <title>Social Awareness Poster</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #ffffff;
-        }
-
-        .image-container {
+        #poster {
             position: relative;
-            overflow: hidden;
-        }
-
-        .image-container img {
             width: 100%;
-            max-height: 600px; /* Set max height to reduce image size */
-            object-fit: cover;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-        }
-
-        .btn {
-            margin-top: 10px;
-        }
-
-        .image-left {
-            float: left;
-            width: 50%;
-        }
-
-        .image-right {
-            float: right;
-            width: 50%;
-            margin-left: -25px;
-        }
-
-        .blank-image {
-            background-color: #f5f5f5;
-            height: 300px; /* Set the height to match the image */
-            width: 100%;
-        }
-
-        @media (max-width: 992px) {
-            .image-left, .image-right {
-                float: none;
-                width: 100%;
-                margin-left: 0;
-            }
-
-            .image-right {
-                margin-left: 0;
-            }
-
-            .row {
-                margin-right: 0;
-                margin-left: 0;
-            }
-        }
-
-        .section-content img {
-            width: 100%;
-            max-height: 500px;
-            object-fit: cover;
-        }
-
-        .navbar-nav {
-            flex-direction: row;
-        }
-
-        .navbar-brand img {
-            height: 30px;
-            width: auto;
-        }
-
-        .carousel-item {
-            height: 70vh;
-            background-size: cover;
-            position: relative;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .center-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-        }
-
-        .logo-text {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .box {
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-    text-align: center;
-    padding: 15px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-  }
-
-  .box img {
-    max-width: 100%;
-    max-height: 200px;
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .box:hover img {
-    transform: scale(1.1);
-  }
-
-  .box p {
-    margin-top: 15px;
-    font-weight: bold;
-  }
-
-  .box span {
-    display: block;
-    margin-top: 8px;
-    transition: color 0.3s ease-in-out;
-  }
-
-  .box:hover span {
-    color: #007bff;
-  }
-
-  
-  .hero {
-            background-image: url('https://via.placeholder.com/1920x1080');
-            background-size: cover;
-            background-position: center;
-            padding: 100px 0;
-        }
-        
-        .courses .card {
-            transition: transform .2s;
-        }
-        
-        .courses .card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .testimonials .testimonial-card {
-            border: none;
-            transition: transform .2s;
-        }
-        
-        .testimonials .testimonial-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .contact form {
             max-width: 600px;
-            margin: auto;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            padding: 10px;
         }
-        
-        .footer {
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            background-color: #333;
-            color: white;
-        }
-        
-        /* Navbar Styles */
-        
-        * {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            background-color: #ebebeb;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-around;
-            background-color: #333;
-            padding: 12px;
-            position: fixed;
-            bottom: 0;
+        #poster img {
             width: 100%;
         }
-        
-        .nav-item {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: white;
-            padding: 12px 16px;
-            border-radius: 50px;
-            background-color: rgba(255, 255, 255, 0);
-        }
-        
-        .nav-item span {
-            width: 0;
+        #student-image-container {
+            position: absolute;
+            top: 10%; /* Adjust based on your poster layout */
+            left: 10%; /* Adjust based on your poster layout */
+            width: 25%; /* Adjust width as needed */
+            padding-top: 25%; /* Aspect ratio 1:1 for square */
             overflow: hidden;
+            border: 2px solid #000;
         }
-        
-        .nav-item:focus {
-            text-decoration: none;
-            color: white;
-            background-color: rgba(255, 255, 255, 0.2);
-            transition: .2s;
-        }
-        
-        .nav-item:focus span {
+        #student-image {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            margin-left: 8px;
-            transition: .2s;
+            height: 100%;
+            object-fit: cover;
         }
-        
-        *:focus {
-            outline: none;
-            border: none;
+        #student-name {
+            position: absolute;
+            top: calc(10% + 25% + -20px); /* Position below the student image */
+            left: 19%; /* Adjust based on your poster layout */
+            color: #000;
+            font-size: 2vw; /* Adjust based on your needs */
+            font-weight: bold;
         }
-
-/*HEADER*/
-header{
-    width:100%;
-    background:linear-gradient(to right, rgba(1,1,1,0.9) 10%, rgba(1,1,1,0.5) 50%, rgba(1,1,1,0.1) 100%), url("https://img.freepik.com/free-photo/school-children-classroom-lesson_155003-3791.jpg?w=996&t=st=1713521008~exp=1713521608~hmac=26742f167724d2e2fbc80c388bd1d4c05a012bc43b766f3196bb7944a827abff");
-    background-size:cover;
-    background-position:left;
-    align-items:center;
-    justify-content:left;
-    color:var(--white);
-    position:relative;
-}
-
-header article{
-    width:50%;
-    padding:8rem 2rem;
-}
-
-header article .title{
-    font-weight:700;
-}
-
-header section{
-    background-color:var(--white);
-    width:90%;
-    position:absolute;
-    bottom:-5rem;
-    left:50%;
-    transform:translate(-50%, 2rem);
-}
-
-header section aside{
-    position:relative;
-}
-
-header section aside a{
-    position:absolute;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:0.2rem;
-    border-radius:50%;
-    background-color:var(--white);
-    bottom:-15px;
-    width:30px;
-    height:30px;
-    left:50%;
-    transform:translate(-50%, 0);
-    border:1px solid var(--gray);
-}
-
-header section aside:nth-child(1){
-    background-color:#ee4500;
-}
-
-header section aside:nth-child(2){
-    background-color:#f5ab35;
-}
-
-header section aside:nth-child(3){
-    background-color:var(--primary_lite);
-}
-
-@media (max-width:920px){
-    header article{
-        width:100%;
-        padding:4rem 1rem;
-    }
-    
-    header section{
-        position:static;
-        width:100%;
-        transform:none;
-        padding:1rem;
-    }
-    
-    header section aside{
-        flex: 1 1 100%;
-        margin:1% 0;
-    }
-    
-    header section aside a{
-        position:relative;
-        transform:none;
-        background-color:none;
-        border:0;
-        padding:0;
-        width:0;
-        height:0;
-        top:0;
-        left:0;
-        color:var(--white);
-    }
-    
-    header section aside a:before{
-        content:"Explore";
-        margin-right:5px;
-        color:var(--white);
-    }
-}
-
-
     </style>
 </head>
 <body>
-    <!-- Image and text -->
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    <img src="logoreal.png" width="30" height="30" class="d-inline-block align-top" alt="">
-   Aashan
-  </a>
-</nav>
-    <header class="flex">
-        <article>
-            <h1 class="title big">Aashan <br><em>an</em> Educational Leap</h1>
-            <p>Get the direct link to view SSLC results. This redirects to the official website of the Kerala government for viewing SSLC Results. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <a href="#" class="btn btn_3">Explore more</a>
-        </article>
-    </header>
-
-    <nav style="z-index: 1000;">
-        <a class="nav-item" href="#">
-          <i data-feather="home"></i><span>Home</span>
-        </a>
-        
-        <a class="nav-item" href="#">
-          <i data-feather="activity"></i><span>Activity</span>
-        </a>
-        
-        <a class="nav-item" href="#">
-          <i data-feather="message-square"></i><span>Messages</span>
-        </a>
-        
-        <a class="nav-item" href="#">
-          <i data-feather="settings"></i><span>Settings</span>
-        </a>
-      </nav>
-      
-      
-<div style="overflow: hidden; white-space: nowrap; background-color: rgb(0, 0, 0); color: white;">
-        <marquee behavior="scroll" direction="left" scrollamount="4">
-            This is a responsive marquee with black background and white text. This is a responsive marquee with black background and white text.
-        </marquee>
-    </div>
-    
-<div class="container mt-5">
-    <div class="row">
-      <div class="col-6 col-md-3">
-        <div class="box">
-          <img src="https://play-lh.googleusercontent.com/ak0oEfFTGscEMgkNiEpOCCNb0HCcvmmOnywP8xbY3ZIQBsKyJe2ZUghabHmmKt-Wh4h6" alt="Placeholder Image" class="img-fluid">
-          <p class="mt-3">SSLC<span> Study material</span></p>
+    <div class="container">
+        <h1 class="text-center">KUPS </h1>
+        <form id="posterForm" class="text-center">
+            <div class="form-group">
+                <label for="imageInput">Upload Image:</label>
+                <input type="file" class="form-control-file" id="imageInput" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="nameInput">Enter Student Name:</label>
+                <input type="text" class="form-control" id="nameInput" placeholder="Student Name" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate Poster</button>
+        </form>
+        <div id="poster" class="position-relative">
+            <img id="poster-template" src="Kadankuni up school.png" alt="Poster Template">
+            <div id="student-image-container">
+                <img id="student-image" src="" alt="Student Image">
+            </div>
+            <div id="student-name"></div>
         </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="box">
-          <img src="https://play-lh.googleusercontent.com/o78VH5AmgfcODG2B2qY65tN28QlHu1hGQmfqu7aGiT9DzZDmp1810seELanV-uH2y0Y" alt="Placeholder Image" class="img-fluid">
-          <p class="mt-3">Quiz<span> quiz questions</span></p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="box">
-          <img src="https://cdn-icons-png.freepik.com/256/2965/2965879.png?semt=ais_hybrid" alt="Placeholder Image" class="img-fluid">
-          <p class="mt-3">Edu News<span>Get latest edu news</span></p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="box">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXR7jf8uSkL5gf_2EOS3E1KGXMZxdyyCmCC17McofrxA&s" alt="Placeholder Image" class="img-fluid">
-          <p class="mt-3">Clubs<span>   school clubs </span></p>
-        </div>
-      </div>
-    </div>
-  </div>
   
-   <br><br><br><section class="section-content">
-        <div class="container">
-            <div class="row align-items-center">
-                
-                <!-- Content on the left -->
-                <div class="col-md-6 order-md-2">
-                    <h2 class="mb-4">SSLC Results</h2>
-                    <p class="mb-4">Get the direct link to view SSLC results. This redirects to the official website of the Kerala government for viewing SSLC Results. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <button class="btn btn-primary">View Results</button>
-                </div>
-    
-                <!-- Image on the right -->
-                <div class="col-md-6 order-md-1">
-                    <img 
-                        src="https://s3-alpha-sig.figma.com/img/603b/a6b0/22ebed91c29f6048472bf5590c0dfbfb?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CrN8Hof6HiGk0ssbTFzErySdCJgYDXwa5OStvLCkBHz8WgOU7OFAOOal~UhiueLsEkcDxRUalm2PvZk0TQTO~HaQyzflyupf06oFvXVju2~zu8ZIwBeiQG~Dbvlnr36cwAsl3xNx5hk-CVf22F6grF~ll54Yc4HSBPDTmkLWnpbK~oAZ-6uFsucGB4dDI9ono8w2HKu37FHJIFeYf9O8VlL2nIGJDZc3aPvXyFWWkssjTGGt6aXVLtCE6l~V5VdGIu727df79sehdfeVioq9tJn8qZQlJ63OmL8844cxp9JwC2ZDkdmbgFkdDc9SeK9TMisXfznYsKO4tEreSEfWOQ__" 
-                        alt="Image" 
-                        class="img-fluid rounded">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    
-    <br><br><br> <section class="section-content">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Image on the left -->
-           
-                <!-- Content on the right -->
-                <div class="col-md-6">
-                    <h2>Edu-themed Games</h2>
-                    <p>Games that teach and entertain the diverging young ones of our generation so that they may take a step into the dream world of education. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <button class="btn btn-primary">Button</button>
-                </div>
-                <div class="col-md-6">
-                        <img src="https://s3-alpha-sig.figma.com/img/4045/9eef/6df68f46bc18c6b54556dcad63b0d4b9?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LAMQD-REgfoRJXiuMbGLHYcuogsbZ9b3r-8X1SooBihshzF75mZ7mpjjk8tDws2yHU-VezM24o-TmDpbOHs7R9SezRcX489UDwYgJP1oo1ga~H~t3i~Zz-HK~N5DScW~6zTq1tZANe3qt03xRhvhI4lUezoRZmsjKA9q8FD6cM4hi8cG2zY62876zeLjCgRjk21-cS5w~AGw6awxeiZmttSYeXMt9~ecgaUkBoCFGqsbJ5KoY3bQN4a9L2NLCiwydAstBlpuumgmZh7ysy7rbEyK-C~LNuGCYhWilZyvh1a4sRo1jdYNjJiL~RF~7Y9VcO6Ii50SRcq9KGc5xEczDQ__" alt="Image" class="img-fluid">
-                    </div>
-            </div>
-        </div>
-    </section>
-    
-    <br><br><br><br>
-    <center><section class="section-content">
-        <div class="container">
-            <div class="row"> 
-                <!-- Image on top -->
-                <div class="col-md-12 mb-4">
-                    <img src="https://s3-alpha-sig.figma.com/img/0968/098f/c62f889d65f24909b438bdcdd8154f72?Expires=1714348800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=csf9TaerTl7iBVjQxdopQSoD64bcLF6O20fesWK1cmhlE5-G5~gNjL2DEw273lbWnPqX8p-aj7WYi4B4xcaQb-av6uESv8QPSW1XVIjDwKp5b6SbCXx12MQRb5OUxhkoT7-Njgw1PBRruP17Hqf9HbyZlXiXbE~gke~8f1GdtPaKmCQ0Jor2ggjHAZVVhujqhSiT1suV0hL2RGZvvL5MzfXHQASwcx~NHCDYkOHbYGvyc~WVlNiygGbD0SQ7X5FP4kQM7rlq8JeWTj5OQYTzYhncWM6u2nJgD9aJ22Syog4wwNwNn2ygYZEusYVOJ3oDTAZ6h7TVc97z~ZRpuHqoNg__" alt="Image" class="img-fluid">
-                </div>
-                <!-- Heading, Paragraph, and Button -->
-                <div class="col-md-12">
-                        <h2>Competitive Guide</h2>
-                    <p style="max-width: 500px;">An ultimate guide to competitions conducted by the Kerala government for students such as Kalolsavam, Sastrolsavam and Kayikolsavam. Dominate the IT mela with help from the tech giants Stellxr and their ways of computer coding and designing</p>
-                    <button class="btn btn-primary">Button</button>
-                </div>
-            </div>
-        </div>
-    </section>
-</center>
-<br><br><br><br><br>
-<!-- Bootstrap JS and Popper.js -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </div>
 
-<!-- Feather Icons Script -->
-<script>
-  feather.replace();
-  document.querySelector(".nav-item").focus();
-</script>
+    <canvas id="canvas" style="display:none;"></canvas>
 
+    <script>
+        document.getElementById('posterForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get the uploaded image file and student name
+            const imageInput = document.getElementById('imageInput').files[0];
+            const nameInput = document.getElementById('nameInput').value;
+
+            // Display the student name
+            document.getElementById('student-name').innerText = nameInput;
+
+            // Display the student image
+            if (imageInput) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('student-image').src = e.target.result;
+                }
+                reader.readAsDataURL(imageInput);
+            }
+        });
+
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const posterTemplate = document.getElementById('poster-template');
+            const studentImage = document.getElementById('student-image');
+            const studentName = document.getElementById('student-name');
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+
+            // Ensure the canvas dimensions match the poster template dimensions
+            canvas.width = posterTemplate.naturalWidth;
+            canvas.height = posterTemplate.naturalHeight;
+
+            // Draw the poster template
+            const img = new Image();
+            img.src = posterTemplate.src;
+            img.onload = function() {
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+                // Draw the student image
+                const studentImg = new Image();
+                studentImg.src = studentImage.src;
+                studentImg.onload = function() {
+                    const studentImgContainer = document.getElementById('student-image-container');
+                    const containerRect = studentImgContainer.getBoundingClientRect();
+                    const posterRect = document.getElementById('poster').getBoundingClientRect();
+                    const scaleX = canvas.width / posterRect.width;
+                    const scaleY = canvas.height / posterRect.height;
+                    const offsetX = (containerRect.left - posterRect.left) * scaleX;
+                    const offsetY = (containerRect.top - posterRect.top) * scaleY;
+                    const width = containerRect.width * scaleX;
+                    const height = containerRect.height * scaleY;
+                    ctx.drawImage(studentImg, offsetX, offsetY, width, height);
+
+                    // Draw the student name
+                    ctx.font = `${2 * scaleX}vw Arial`; // Adjust based on your needs
+                    ctx.fillStyle = '#000'; // Adjust based on your needs
+                    const nameX = offsetX;
+                    const nameY = offsetY + height + 10 * scaleY; // Place name 10px below the image
+                    ctx.fillText(studentName.innerText, nameX, nameY);
+
+                    // Trigger the download
+                    const link = document.createElement('a');
+                    link.download = 'poster.png';
+                    link.href = canvas.toDataURL();
+                    link.click();
+                };
+            };
+        });
+    </script>
 </body>
 </html>
