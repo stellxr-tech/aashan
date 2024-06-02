@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Awareness Poster</title>
+    <title>Kups praveshanolsavam</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         #poster {
@@ -33,20 +33,39 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 5px;
         }
         #student-name {
             position: absolute;
-            top: calc(10% + 25% + -20px); /* Position below the student image */
-            left: 19%; /* Adjust based on your poster layout */
+            top: calc(10% + 25% + -23px); /* Position below the student image */
+            left: 16%; /* Adjust based on your poster layout */
             color: #000;
-            font-size: 2vw; /* Adjust based on your needs */
+            font-size: 5vw; /* Adjust based on your needs */
             font-weight: bold;
+        }
+        footer {
+           
+            bottom: 0;
+            width: 100%;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Style for the link */
+        footer a {
+            color: #007bff; /* Bootstrap primary color */
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center">KUPS </h1>
+        <h1 class="text-center">KUPS <br>praveshanolsavam </h1>
         <form id="posterForm" class="text-center">
             <div class="form-group">
                 <label for="imageInput">Upload Image:</label>
@@ -59,7 +78,7 @@
             <button type="submit" class="btn btn-primary">Generate Poster</button>
         </form>
         <div id="poster" class="position-relative">
-            <img id="poster-template" src="Kadankuni up school.png" alt="Poster Template">
+            <img id="poster-template" src="Kadankuni up school (4).png" alt="Poster Template">
             <div id="student-image-container">
                 <img id="student-image" src="" alt="Student Image">
             </div>
@@ -69,6 +88,9 @@
     </div>
 
     <canvas id="canvas" style="display:none;"></canvas>
+    <footer>
+        Powered by <a href="https://stellxr.in" target="_blank">stellxr.in</a>
+    </footer>
 
     <script>
         document.getElementById('posterForm').addEventListener('submit', function(event) {
